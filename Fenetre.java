@@ -99,6 +99,36 @@ class Fenetre extends JFrame {
         panel.add(bouton7, BorderLayout.CENTER);
 
 
+        /*
+        BOUTON 8 : ÉCRIRE UN NOMBRE
+         */
+        JButton bouton8 = new JButton("TP8 : écrire un nombre");
+        bouton8.addActionListener(actionEvent -> {
+            TP8 tp8 = new TP8();
+        });
+        panel.add(bouton8, BorderLayout.CENTER);
+
+
+        /*
+        BOUTON 9 : POSITIF-NÉGATIF / PAIR-IMPAIR
+         */
+        JButton bouton9 = new JButton("TP9 : positif-négatif / pair-impair");
+        bouton9.addActionListener(actionEvent -> {
+            TP9 tp9 = new TP9();
+        });
+        panel.add(bouton9, BorderLayout.CENTER);
+
+
+        /*
+        BOUTON 10 : CALCUL DE FACTORIELLE
+         */
+        JButton bouton10 = new JButton("TP10 : calcul de factorielle");
+        bouton10.addActionListener(actionEvent -> {
+            TP10 tp10 = new TP10();
+        });
+        panel.add(bouton10, BorderLayout.CENTER);
+
+
         // Rendre la fenêtre visible
         setVisible(true);
     }
