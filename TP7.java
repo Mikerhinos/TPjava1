@@ -14,20 +14,20 @@ class TP7 {
         frame.setContentPane(tp7);
 
         JLabel label = new JLabel("Saisissez un nombre : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 1;
         tp7.add(label, constraint);
 
         JTextField texte = new JTextField();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         texte.setColumns(6);
         constraint.gridx = 1;
         constraint.gridy = 1;
         tp7.add(texte, constraint);
 
         JLabel label2 = new JLabel();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.gridwidth = GridBagConstraints.REMAINDER;
         constraint.gridx = 0;
         constraint.gridy = 3;
         tp7.add(label2, constraint);
@@ -43,7 +43,7 @@ class TP7 {
                 label2.setText("La somme des entiers de " + nombre + " est " + somme);
             }
         });
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 2;
         tp7.add(bouton, constraint);

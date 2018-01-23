@@ -15,7 +15,7 @@ class TP2 {
 
         // Ligne 1 : le label
         JLabel question = new JLabel("Entrez une valeur A et B : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 0;
         tp2.add(question, constraint);
@@ -23,7 +23,7 @@ class TP2 {
 
         // Ligne 2 : label valeur A et son champs de saisie
         JLabel a = new JLabel("A : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 1;
         tp2.add(a, constraint);
@@ -38,7 +38,7 @@ class TP2 {
 
         // Ligne 3 : label valeur B et son champs de saisie
         JLabel b = new JLabel("B : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 2;
         tp2.add(b, constraint);
@@ -59,7 +59,7 @@ class TP2 {
             valA.setText(valB.getText());
             valB.setText(c);
         });
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 3;
         tp2.add(bouton, constraint);

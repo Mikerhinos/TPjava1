@@ -15,7 +15,7 @@ class TP4 {
         frame.setContentPane(tp4);
 
         JLabel label = new JLabel("Saisissez une adresse : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 1;
         tp4.add(label, constraint);
@@ -45,7 +45,7 @@ class TP4 {
                 label2.setText("Le code postal est : " + find.group(1) + " et son carré est " + Math.pow(Integer.parseInt(find.group(1)), 2));
             }
         });
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 2;
         tp4.add(bouton, constraint);

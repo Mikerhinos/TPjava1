@@ -15,20 +15,20 @@ class TP9 {
         frame.setContentPane(tp9);
 
         JLabel label = new JLabel("Saisissez un nombre : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 1;
         tp9.add(label, constraint);
 
         JTextField texte = new JTextField();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         texte.setColumns(4);
         constraint.gridx = 1;
         constraint.gridy = 1;
         tp9.add(texte, constraint);
 
         JLabel label2 = new JLabel();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.gridwidth = GridBagConstraints.REMAINDER;
         constraint.gridx = 0;
         constraint.gridy = 3;
         tp9.add(label2, constraint);
@@ -53,7 +53,7 @@ class TP9 {
                 label2.setText(reponse);
             }
         });
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 2;
         tp9.add(bouton, constraint);

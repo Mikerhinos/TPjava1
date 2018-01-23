@@ -13,7 +13,7 @@ class TP3 {
         frame.setContentPane(tp3);
 
         JLabel label = new JLabel("Entrez quelque chose : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 1;
         tp3.add(label, constraint);
@@ -36,7 +36,7 @@ class TP3 {
         bouton.addActionListener(actionEvent -> {
             label2.setText("Vous avez écris : " + texte.getText());
         });
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 2;
         tp3.add(bouton, constraint);

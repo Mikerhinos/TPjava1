@@ -15,35 +15,35 @@ class TP6 {
 
 
         JLabel question = new JLabel("Entrez une valeur A et B : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 0;
         tp6.add(question, constraint);
 
 
         JLabel a = new JLabel("A : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 1;
         tp6.add(a, constraint);
 
         JTextField valA = new JTextField();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
-        valA.setColumns(6);
+        constraint.fill = GridBagConstraints.NONE;
+        valA.setColumns(4);
         constraint.gridx = 1;
         constraint.gridy = 1;
         tp6.add(valA, constraint);
 
 
         JLabel b = new JLabel("B : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 2;
         tp6.add(b, constraint);
 
         JTextField valB = new JTextField();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
-        valB.setColumns(6);
+        constraint.fill = GridBagConstraints.NONE;
+        valB.setColumns(4);
         constraint.gridx = 1;
         constraint.gridy = 2;
         tp6.add(valB, constraint);
@@ -69,7 +69,7 @@ class TP6 {
                 } else System.out.println("Erreur inconnue :/");
             }
         });
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 3;
         tp6.add(bouton, constraint);

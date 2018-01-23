@@ -37,20 +37,20 @@ class TP10 {
         frame.setContentPane(tp10);
 
         JLabel label = new JLabel("Saisissez un nombre : ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 1;
         tp10.add(label, constraint);
 
         JTextField texte = new JTextField();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         texte.setColumns(6);
         constraint.gridx = 1;
         constraint.gridy = 1;
         tp10.add(texte, constraint);
 
         JLabel label2 = new JLabel();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.gridwidth = GridBagConstraints.REMAINDER;
         constraint.gridx = 0;
         constraint.gridy = 3;
         tp10.add(label2, constraint);
@@ -66,7 +66,7 @@ class TP10 {
                 label2.setText("La factorielle de " + getNombre() + " est " + getProduit());
             }
         });
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 2;
         tp10.add(bouton, constraint);

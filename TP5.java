@@ -17,14 +17,14 @@ class TP5 {
         frame.setContentPane(tp5);
 
         JLabel label = new JLabel("Devinez le nombre mystère ! Indice il est entre 10 et 20 ");
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 1;
         tp5.add(label, constraint);
 
         JTextField texte = new JTextField();
-        constraint.fill = GridBagConstraints.HORIZONTAL;
-        texte.setColumns(4);
+        constraint.fill = GridBagConstraints.NONE;
+        texte.setColumns(2);
         constraint.gridx = 0;
         constraint.gridy = 2;
         tp5.add(texte, constraint);
@@ -51,7 +51,7 @@ class TP5 {
                 }
             }
         });
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraint.fill = GridBagConstraints.NONE;
         constraint.gridx = 0;
         constraint.gridy = 3;
         tp5.add(bouton, constraint);
