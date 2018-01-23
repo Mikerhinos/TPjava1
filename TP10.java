@@ -57,12 +57,14 @@ class TP10 {
 
         JButton bouton = new JButton("Calculer");
         bouton.addActionListener(actionEvent -> {
-            setProduit(1.0, true);
-            setNombre(Double.parseDouble(texte.getText()));
-            for (int i = 1; i <= getNombre(); i++) {
-                setProduit(i, false);
+            if (texte.getText().matches("-?\\d+(\\.\\d+)?")) { // si la saisie est bien numérique, afin d'éviter une exception
+                setProduit(1.0, true); // nouveau clique, remise à zéro (1 en fait) du produit
+                setNombre(Double.parseDouble(texte.getText()));
+                for (int i = 1; i <= getNombre(); i++) {
+                    setProduit(i, false);
+                }
+                label2.setText("La factorielle de " + getNombre() + " est " + getProduit());
             }
-            label2.setText("La factorielle de " + getNombre() + " est " + getProduit());
         });
         constraint.fill = GridBagConstraints.HORIZONTAL;
         constraint.gridx = 0;

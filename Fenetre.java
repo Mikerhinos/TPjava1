@@ -36,7 +36,7 @@ class Fenetre extends JFrame {
             TP1 tp1 = new TP1();
         });
         // Ajout du bouton au panel
-        panel.add(bouton1, BorderLayout.CENTER);
+        panel.add(bouton1, BorderLayout.LINE_START);
 
 
         /*
@@ -56,7 +56,7 @@ class Fenetre extends JFrame {
         bouton3.addActionListener(actionEvent -> {
             TP3 tp3 = new TP3();
         });
-        panel.add(bouton3, BorderLayout.CENTER);
+        panel.add(bouton3, BorderLayout.LINE_END);
 
 
         /*
@@ -66,7 +66,7 @@ class Fenetre extends JFrame {
         bouton4.addActionListener(actionEvent -> {
             TP4 tp4 = new TP4();
         });
-        panel.add(bouton4, BorderLayout.CENTER);
+        panel.add(bouton4, BorderLayout.LINE_START);
 
 
         /*
@@ -86,7 +86,7 @@ class Fenetre extends JFrame {
         bouton6.addActionListener(actionEvent -> {
             TP6 tp6 = new TP6();
         });
-        panel.add(bouton6, BorderLayout.CENTER);
+        panel.add(bouton6, BorderLayout.LINE_END);
 
 
         /*

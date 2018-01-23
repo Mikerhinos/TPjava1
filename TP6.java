@@ -57,15 +57,17 @@ class TP6 {
 
         JButton bouton = new JButton("Contrôler le produit");
         bouton.addActionListener(actionEvent -> {
-            double nA = Double.parseDouble(valA.getText());
-            double nB = Double.parseDouble(valB.getText());
-            if (nA * nB > 0) {
-                label2.setText("Le produit est positif ! (" + nA + "x" + nB + "=" + nA * nB + ")");
-            } else if (nA * nB < 0) {
-                label2.setText("Le produit est négatif ! (" + nA + "x" + nB + "=" + nA * nB + ")");
-            } else if (nA * nB == 0) {
-                label2.setText("Le produit est nul ! (" + nA + "x" + nB + "=" + nA * nB + ")");
-            } else System.out.println("Erreur inconnue :/");
+            if (valA.getText().matches("-?\\d+(\\.\\d+)?") && valB.getText().matches("-?\\d+(\\.\\d+)?")) { // si la saisie est bien numérique, afin d'éviter une exception
+                double nA = Double.parseDouble(valA.getText());
+                double nB = Double.parseDouble(valB.getText());
+                if (nA * nB > 0) {
+                    label2.setText("Le produit est positif ! (" + nA + "x" + nB + "=" + nA * nB + ")");
+                } else if (nA * nB < 0) {
+                    label2.setText("Le produit est négatif ! (" + nA + "x" + nB + "=" + nA * nB + ")");
+                } else if (nA * nB == 0) {
+                    label2.setText("Le produit est nul ! (" + nA + "x" + nB + "=" + nA * nB + ")");
+                } else System.out.println("Erreur inconnue :/");
+            }
         });
         constraint.fill = GridBagConstraints.HORIZONTAL;
         constraint.gridx = 0;

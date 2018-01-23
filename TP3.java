@@ -12,7 +12,7 @@ class TP3 {
         GridBagConstraints constraint = new GridBagConstraints();
         frame.setContentPane(tp3);
 
-        JLabel label = new JLabel("Saisissez du texte : ");
+        JLabel label = new JLabel("Entrez quelque chose : ");
         constraint.fill = GridBagConstraints.HORIZONTAL;
         constraint.gridx = 0;
         constraint.gridy = 1;

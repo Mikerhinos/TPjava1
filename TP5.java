@@ -38,15 +38,17 @@ class TP5 {
 
         JButton bouton = new JButton("Rechercher et calculer");
         bouton.addActionListener(actionEvent -> {
-            int nombre = Integer.parseInt(texte.getText());
-            if (nombre < 10 || nombre > 20) {
-                label2.setText("Le nombre mystère est compris entre 10 et 20 !");
-            } else if (nombre < nombreMystere) {
-                label2.setText("Le nombre mystère est supérieur !");
-            } else if (nombre > nombreMystere) {
-                label2.setText("Le nombre mystère est inférieur !");
-            } else if (nombre == nombreMystere) {
-                label2.setText("Félicitations le nombre mystère est bien " + nombre + " !");
+            if (texte.getText().matches("-?\\d+(\\.\\d+)?")) { // si la saisie est bien numérique, afin d'éviter une exception
+                int nombre = Integer.parseInt(texte.getText());
+                if (nombre < 10 || nombre > 20) {
+                    label2.setText("Le nombre mystère est compris entre 10 et 20 !");
+                } else if (nombre < nombreMystere) {
+                    label2.setText("Le nombre mystère est supérieur !");
+                } else if (nombre > nombreMystere) {
+                    label2.setText("Le nombre mystère est inférieur !");
+                } else if (nombre == nombreMystere) {
+                    label2.setText("Félicitations le nombre mystère est bien " + nombre + " !");
+                }
             }
         });
         constraint.fill = GridBagConstraints.HORIZONTAL;

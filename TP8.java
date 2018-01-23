@@ -39,15 +39,17 @@ class TP8 {
 
         JButton bouton = new JButton("Calculer et afficher");
         bouton.addActionListener(actionEvent -> {
-            double nombre = Double.parseDouble(texte.getText());
-            double somme = 0;
-            for (int i = 0; i <= nombre; i++) {
-                somme = somme + i;
+            if (texte.getText().matches("-?\\d+(\\.\\d+)?")) { // si la saisie est bien numérique, afin d'éviter une exception
+                double nombre = Double.parseDouble(texte.getText());
+                double somme = 0;
+                for (int i = 0; i <= nombre; i++) {
+                    somme = somme + i;
+                }
+                NumberFormat formatter =
+                        new RuleBasedNumberFormat(RuleBasedNumberFormat.SPELLOUT);
+                String result = formatter.format(somme);
+                label2.setText("La somme des entiers de " + nombre + " est " + result);
             }
-            NumberFormat formatter =
-                    new RuleBasedNumberFormat(RuleBasedNumberFormat.SPELLOUT);
-            String result = formatter.format(somme);
-            label2.setText("La somme des entiers de " + nombre + " est " + result);
         });
         constraint.fill = GridBagConstraints.HORIZONTAL;
         constraint.gridx = 0;

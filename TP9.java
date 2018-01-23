@@ -35,21 +35,23 @@ class TP9 {
 
         JButton bouton = new JButton("Analyser le nombre");
         bouton.addActionListener(actionEvent -> {
-            int saisieInt = Integer.parseInt(texte.getText());
-            String reponse = "";
-            if (saisieInt > 0) {
-                reponse += "Le nombre est positif et ";
-            } else if (saisieInt < 0) {
-                reponse += "Le nombre est négatif et ";
-            } else if (saisieInt == 0) {
-                reponse += "Le nombre est zéro et toujours ";
-            } else reponse += "Erreur";
-            if (saisieInt % 2 == 0) {
-                reponse += "pair";
-            } else {
-                reponse += "impair";
+            if (texte.getText().matches("-?\\d+(\\.\\d+)?")) { // si la saisie est bien numérique, afin d'éviter une exception
+                int saisieInt = Integer.parseInt(texte.getText());
+                String reponse = "";
+                if (saisieInt > 0) {
+                    reponse += "Le nombre est positif et ";
+                } else if (saisieInt < 0) {
+                    reponse += "Le nombre est négatif et ";
+                } else if (saisieInt == 0) {
+                    reponse += "Le nombre est zéro et toujours ";
+                } else reponse += "Erreur";
+                if (saisieInt % 2 == 0) {
+                    reponse += "pair";
+                } else {
+                    reponse += "impair";
+                }
+                label2.setText(reponse);
             }
-            label2.setText(reponse);
         });
         constraint.fill = GridBagConstraints.HORIZONTAL;
         constraint.gridx = 0;
